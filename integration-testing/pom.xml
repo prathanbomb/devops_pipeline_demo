@@ -162,12 +162,10 @@
                                 property is true
                             -->
                             <skipTests>${skip.integration.tests}</skipTests>
+                            <useSystemClassLoader>false</useSystemClassLoader>
                         </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                </configuration>
             </plugin>
 
             <plugin>
