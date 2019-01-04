@@ -41,8 +41,7 @@ cd java_web_code/
 echo ""
 echo "..... Provisioning Phase Started :: Building Docker Container :: ......"
 cd ../docker/
-whoami
-sudo docker build -t devops_pipeline_demo .'''
+docker build -t devops_pipeline_demo .'''
       }
     }
     stage('deploy') {
