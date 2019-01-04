@@ -46,7 +46,16 @@ sudo docker build -t devops_pipeline_demo .'''
     }
     stage('deploy') {
       steps {
-        sh '''# run your container
+        sh '''CONTAINER=devops_pipeline_demo
+ 
+RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
+
+if [ $? -eq 1 ]; then
+  echo "\'$CONTAINER\' does not exist."
+else
+  sudo docker rm -f $CONTAINER
+
+# run your container
 echo "..... Deployment Phase Started :: Building Docker Container :: ......"
 sudo docker run -d -p 8180:8080 --name devops_pipeline_demo devops_pipeline_demo
 
