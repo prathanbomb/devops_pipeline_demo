@@ -17,7 +17,7 @@ mvn install'''
         sh '''#-BUILD (TEST)
 echo ""
 echo "..... Test Phase Started :: Testing via Automated Scripts :: ......"
-cd ../integration-testing/
+cd integration-testing
 mvn clean test'''
       }
     }
@@ -26,7 +26,7 @@ mvn clean test'''
         sh '''#-BUILD (TEST)
 echo ""
 echo "..... Test Phase Started :: Testing via Automated Scripts :: ......"
-cd ../integration-testing/
+cd integration-testing
 mvn clean verify -P integration-test'''
       }
     }
