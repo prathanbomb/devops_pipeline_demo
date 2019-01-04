@@ -161,8 +161,7 @@
                                 Skips integration tests if the value of skip.integration.tests
                                 property is true
                             -->
-                            <skipTests>${skip.integration.tests}</skipTests>
-                            <useSystemClassLoader>false</useSystemClassLoader>
+                            <skipTests>true</skipTests>
                         </configuration>
                     </execution>
                 </executions>
