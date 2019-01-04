@@ -55,6 +55,8 @@ if [ $? -eq 1 ]; then
 else
   sudo docker rm -f $CONTAINER
 
+fi
+
 # run your container
 echo "..... Deployment Phase Started :: Building Docker Container :: ......"
 sudo docker run -d -p 8180:8080 --name devops_pipeline_demo devops_pipeline_demo
