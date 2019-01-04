@@ -165,6 +165,9 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
             </plugin>
 
             <plugin>
